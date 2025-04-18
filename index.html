@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamá Chayo's Kitchen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-red: #d32f2f;
+            --primary-orange: #f57c00;
+            --accent-green: #388e3c;
+            --dark-brown: #4e342e;
+            --light-grey: #e0e0e0;
+            --dark-grey: #616161;
+            --background-light: #fff3e0;
+            --container-bg: #ffffff;
+            --text-color: #212121;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--background-light);
+            color: var(--text-color);
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .container {
+            background-color: var(--container-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 650px;
+            margin: 20px auto;
+        }
+
+        .logo {
+            max-width: 180px;
+            height: auto;
+            display: block;
+            margin: 0 auto 25px auto;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: var(--primary-red);
+            font-family: 'Pacifico', cursive;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--primary-orange);
+            font-size: 1.8em; 
+            margin-top: 30px;
+            margin-bottom: 20px; 
+            border-bottom: 3px solid var(--primary-red); 
+            padding-bottom: 10px;
+            display: inline-block; 
+        }
+
+        .menu-list {
+            list-style: none; 
+            padding: 0; 
+            margin: 0; 
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+            padding: 12px 0; 
+            border-bottom: 1px dashed var(--light-grey);
+            transition: background-color 0.2s ease; 
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0; 
+        }
+
+        .menu-item:hover {
+            background-color: #fff9c4; 
+        }
+
+        .food-name {
+            font-weight: 600; 
+            color: var(--dark-brown);
+            font-size: 1.1em; 
+        }
+
+        .price {
+            color: var(--primary-red);
+            font-weight: bold;
+            font-size: 1.1em; 
+        }
+
+        .availability {
+            color: var(--accent-green); 
+            font-style: italic;
+            margin-top: 25px;
+            font-size: 1.1em;
+        }
+
+        .address {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--light-grey);
+            color: var(--dark-grey);
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <img src="MamaChayoLogo.jpg" alt="Mamá Chayo's Kitchen Logo - Authentic Mexican Food" class="logo">
+
+        <h1>Mamá Chayo's Kitchen</h1>
+
+        <h2>Our Delicious Menu</h2>
+    
+        <ul class="menu-list">
+            <li class="menu-item">
+                <span class="food-name">Pozole</span>
+                <span class="price">$10</span>
+            </li>
+            <li class="menu-item">
+                <span class="food-name">Tacos Dorados</span>
+                <span class="price">$2</span>
+            </li>
+            <li class="menu-item">
+                <span class="food-name">Sopes</span>
+                <span class="price">$2</span>
+            </li>
+            <li class="menu-item">
+                <span class="food-name">Enchiladas</span>
+                <span class="price">$2</span>
+            </li>
+        </ul>
+
+        <p class="availability">Available on Weekends!</p>
+
+        <p class="address">Visit us at:<br>
+           317 Barson St,<br>
+           Santa Cruz, CA 95060
+        </p>
+    </div>
+</body>
+</html>
