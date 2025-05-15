@@ -10,59 +10,61 @@
 
     <style>
         :root {
-            --primary-red: #d32f2f;
-            --primary-orange: #f57c00;
-            --accent-green: #388e3c;
-            --dark-brown: #4e342e;
-            --light-grey: #e0e0e0;
-            --dark-grey: #616161;
-            --background-light: #fff3e0;
-            --container-bg: #ffffff;
-            --text-color: #212121;
+            /* Colors inspired by the new dolphin logo */
+            --logo-teal: #40c0cb;
+            --logo-orange: #f37a22;
+            --logo-pink: #e85d88;
+            --logo-yellow: #fcd050; /* Accent */
+            
+            --body-background: #1c1c1e;
+            --container-background: #ffffff;
+            --text-primary: #212121;
+            --text-secondary: #585858;
+            --border-light: #d1d1d1;
         }
 
         body {
             font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: var(--background-light);
-            color: var(--text-color);
+            background-color: var(--body-background);
+            color: var(--text-primary);
             text-align: center;
             line-height: 1.6;
         }
 
         .container {
-            background-color: var(--container-bg);
+            background-color: var(--container-background);
+            color: var(--text-primary);
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            max-width: 650px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            max-width: 680px;
             margin: 20px auto;
         }
 
         .logo {
-            max-width: 180px;
+            max-width: 220px; 
             height: auto;
             display: block;
-            margin: 0 auto 25px auto;
-            border-radius: 8px;
+            margin: 0 auto 30px auto;
         }
 
         h1 {
-            color: var(--primary-red);
+            color: var(--logo-teal);
             font-family: 'Pacifico', cursive;
             font-size: 2.8em;
-            margin-bottom: 15px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
         h2 {
-            color: var(--primary-orange);
-            font-size: 1.8em; 
+            color: var(--logo-orange);
+            font-size: 1.9em; 
             margin-top: 30px;
-            margin-bottom: 20px; 
-            border-bottom: 3px solid var(--primary-red); 
-            padding-bottom: 10px;
+            margin-bottom: 25px; 
+            border-bottom: 3px solid var(--logo-teal);
+            padding-bottom: 12px;
             display: inline-block; 
         }
 
@@ -75,10 +77,10 @@
         .menu-item {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 10px;
-            padding: 12px 0; 
-            border-bottom: 1px dashed var(--light-grey);
+            align-items: flex-start;
+            margin-bottom: 12px;
+            padding: 14px 5px;
+            border-bottom: 1px dashed var(--border-light);
             transition: background-color 0.2s ease; 
         }
 
@@ -88,33 +90,47 @@
         }
 
         .menu-item:hover {
-            background-color: #fff9c4; 
+            background-color: #e3f2fd; 
+        }
+
+        .food-details {
+            text-align: left;
+            padding-right: 10px;
         }
 
         .food-name {
             font-weight: 600; 
-            color: var(--dark-brown);
-            font-size: 1.1em; 
+            color: var(--text-primary);
+            font-size: 1.15em; 
+        }
+
+        .food-description {
+            font-size: 0.9em;
+            color: var(--text-secondary);
+            display: block; 
+            margin-top: 3px;
         }
 
         .price {
-            color: var(--primary-red);
+            color: var(--logo-orange);
             font-weight: bold;
-            font-size: 1.1em; 
+            font-size: 1.15em; 
+            white-space: nowrap;
         }
 
         .availability {
-            color: var(--accent-green); 
+            color: var(--logo-pink);
             font-style: italic;
-            margin-top: 25px;
+            margin-top: 30px;
             font-size: 1.1em;
+            font-weight: 600;
         }
 
         .address {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px dashed var(--light-grey);
-            color: var(--dark-grey);
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px dashed var(--border-light);
+            color: var(--text-secondary);
             font-size: 0.95em;
             line-height: 1.8;
         }
@@ -123,7 +139,7 @@
 <body>
     <div class="container">
         
-        <img src="1744997548945.jpg" alt="Mamá Chayo's Kitchen Logo - Authentic Mexican Food" class="logo">
+        <img src="1744997548945.jpg" alt="Mamá Chayo's Kitchen Logo - Authentic Mexican Food with Dolphin and Butterfly" class="logo">
 
         <h1>Mamá Chayo's Kitchen</h1>
 
@@ -131,20 +147,31 @@
     
         <ul class="menu-list">
             <li class="menu-item">
-                <span class="food-name">Pozole</span>
+                <div class="food-details">
+                    <span class="food-name">Pozole</span>
+                </div>
                 <span class="price">$10</span>
             </li>
             <li class="menu-item">
-                <span class="food-name">Tacos Dorados</span>
-                <span class="price">$2</span>
+                <div class="food-details">
+                    <span class="food-name">Tacos Dorados</span>
+                    <span class="food-description">(3 per order)</span>
+                </div>
+                <span class="price">$10</span>
             </li>
             <li class="menu-item">
-                <span class="food-name">Sopes</span>
-                <span class="price">$2</span>
+                <div class="food-details">
+                    <span class="food-name">Sopes</span>
+                    <span class="food-description">(3 per order)</span>
+                </div>
+                <span class="price">$10</span>
             </li>
             <li class="menu-item">
-                <span class="food-name">Enchiladas</span>
-                <span class="price">$2</span>
+                <div class="food-details">
+                    <span class="food-name">Enchiladas</span>
+                    <span class="food-description">(3 per order)</span>
+                </div>
+                <span class="price">$10</span>
             </li>
         </ul>
 
@@ -156,4 +183,4 @@
         </p>
     </div>
 </body>
-</html>
+    </html>
