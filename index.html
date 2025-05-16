@@ -21,6 +21,7 @@
             --text-primary: #212121;
             --text-secondary: #585858;
             --border-light: #d1d1d1;
+            --link-color: #007bff; /* Standard link blue, can be themed */
         }
 
         body {
@@ -118,18 +119,44 @@
             white-space: nowrap;
         }
 
+        .contact-info { /* New section for contact */
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--border-light);
+        }
+
         .availability {
             color: var(--logo-pink);
             font-style: italic;
-            margin-top: 30px;
+            /* margin-top: 30px; Removed as it's now part of contact-info flow */
             font-size: 1.1em;
             font-weight: 600;
+            margin-bottom: 15px; /* Space before order info */
+        }
+        
+        .order-info {
+            margin-bottom: 15px;
+        }
+
+        .order-info p {
+            margin: 5px 0;
+            font-size: 1.05em;
+            color: var(--text-secondary);
+        }
+
+        .order-info a {
+            color: var(--logo-teal); /* Themed link color */
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .order-info a:hover {
+            text-decoration: underline;
         }
 
         .address {
-            margin-top: 35px;
-            padding-top: 25px;
-            border-top: 1px dashed var(--border-light);
+            /* margin-top: 35px; Removed as it's now part of contact-info flow */
+            /* padding-top: 25px; Removed */
+            /* border-top: 1px dashed var(--border-light); Removed */
             color: var(--text-secondary);
             font-size: 0.95em;
             line-height: 1.8;
@@ -175,12 +202,19 @@
             </li>
         </ul>
 
-        <p class="availability">Available on Weekends! 12pm till we Run out!!</p>
+        <div class="contact-info">
+            <p class="availability">Available on Weekends! 12pm till we Run out!!</p>
+            
+            <div class="order-info">
+                <p>To Place Orders, Please Call:</p>
+                <p><a href="tel:+18314306234">+1 (831) 430-6234</a></p>
+            </div>
 
-        <p class="address">Visit us at:<br>
-           317 Barson St,<br>
-           Santa Cruz, CA 95060
-        </p>
+            <p class="address">Visit us at:<br>
+               317 Barson St,<br>
+               Santa Cruz, CA 95060
+            </p>
+        </div>
     </div>
 </body>
-    </html>
+                                                                    </html>
